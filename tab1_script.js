@@ -34,6 +34,7 @@
 
 		    // For each place, get the icon, name and location.
 		    bounds = new google.maps.LatLngBounds();
+		    
 		    places.forEach(function(place) {
 		      var icon = {
 		        url: place.icon,
