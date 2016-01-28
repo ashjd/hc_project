@@ -1,8 +1,8 @@
 	function initAutocomplete() {
 		  
-		  var map = new google.maps.Map(document.getElementById('map'), {
+		  map = new google.maps.Map(document.getElementById('map'), {
 		    center: {lat: 37.7833, lng: -122.431297},
-		    zoom: 13,
+		    zoom: 12,
 		    mapTypeId: google.maps.MapTypeId.ROADMAP
 		  });
 
@@ -15,7 +15,7 @@
 		    searchBox.setBounds(map.getBounds());
 		  });
 
-		  var markers = [];
+		  //var markers = [];
 		 
 		  // Listen for the event fired when the user selects a prediction and retrieve
 		  // more details for that place.
@@ -33,7 +33,7 @@
 		    markers = [];
 
 		    // For each place, get the icon, name and location.
-		    var bounds = new google.maps.LatLngBounds();
+		    bounds = new google.maps.LatLngBounds();
 		    places.forEach(function(place) {
 		      var icon = {
 		        url: place.icon,
