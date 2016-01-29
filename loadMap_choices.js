@@ -7,14 +7,16 @@ function loadMapContents (userChoice){
 	marker.setMap(null);
 	});
 
-	placeType.pop();
-	placeType.push(userChoice);
 
+
+/*	placeType.pop();
+	placeType.push(userChoice);
+*/
 	var service = new google.maps.places.PlacesService(map);
 
 	service.nearbySearch({
 	    bounds: bounds,
-	    types: placeType
+	    types: userChoice
 	  }, callback);
 	}
 
