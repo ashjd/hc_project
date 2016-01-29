@@ -51,8 +51,6 @@
 
 		    	switch (index){
 		    		
-		    		//userChoice.pop();
-
 		    		case 0 : document.getElementById("places-visit").innerHTML = "You are inside 'Places to visit' !"; break;
 		    		case 1 : userChoice ='lodging'; hotelContent(); /* loadHotels(); document.getElementById("hotels").innerHTML = "You are inside 'Hotels tab' !"*/; break;
 		    		case 2 : userChoice = 'restaurant'; document.getElementById("restaurants").innerHTML = "You are inside 'Restaurants tab' !"; break;

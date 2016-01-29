@@ -14,8 +14,6 @@
 		  map.addListener('bounds_changed', function() {
 		    searchBox.setBounds(map.getBounds());
 		  });
-
-		  //var markers = [];
 		 
 		  // Listen for the event fired when the user selects a prediction and retrieve
 		  // more details for that place.
@@ -30,7 +28,7 @@
 		    markers.forEach(function(marker) {
 		      marker.setMap(null);
 		    });
-		    markers = [];
+		    //markers = [];
 
 		    // For each place, get the icon, name and location.
 		    bounds = new google.maps.LatLngBounds();

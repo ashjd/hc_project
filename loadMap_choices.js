@@ -2,11 +2,19 @@ function loadMapContents (userChoice){
 
 	infowindow = new google.maps.InfoWindow();
 
+	// Clear out the old markers.
+	markersC.forEach(function(marker) {
+	marker.setMap(null);
+	});
+
+	placeType.pop();
+	placeType.push(userChoice);
+
 	var service = new google.maps.places.PlacesService(map);
 
 	service.nearbySearch({
 	    bounds: bounds,
-	    types: userChoice
+	    types: placeType
 	  }, callback);
 	}
 
@@ -24,6 +32,8 @@ function loadMapContents (userChoice){
 	    map: map,
 	    position: place.geometry.location
 	  });
+
+	  markersC.push(marker);
 
 	  google.maps.event.addListener(marker, 'click', function() {
 	    infowindow.setContent(place.name);
