@@ -1,14 +1,12 @@
 function loadMapContents (userChoice){
 
 	infowindow = new google.maps.InfoWindow();
-	placeType.pop();
-	placeType.push(userChoice);
 
 	var service = new google.maps.places.PlacesService(map);
 
 	service.nearbySearch({
 	    bounds: bounds,
-	    types: placeType
+	    types: userChoice
 	  }, callback);
 	}
 
