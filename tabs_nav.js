@@ -67,11 +67,11 @@
 		    		case 2 : userChoice.push('restaurant', 'cafe');
 		    				 document.getElementById("restaurants").innerHTML = "You are inside 'Restaurants tab' !"; 
 		    				 break;
-		    		case 3 : userChoice.push('store', 'shopping_mall', 'grocery_or_supermarket'); 
+		    		case 3 : userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
 		    				 document.getElementById("store").innerHTML = "You are inside 'Stores tab' !"; 
 		    				 break;
-		    		case 4 : userChoice.push('park'); 
-		    				 document.getElementById("news").innerHTML = "You are inside 'News tab' !"; 
+		    		case 4 : userChoice.push('park','aquarium','art_gallery'); 
+		    				 document.getElementById("rec").innerHTML = "You are inside 'News tab' !"; 
 		    				 break;
 		    	}
 
