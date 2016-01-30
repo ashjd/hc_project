@@ -2,7 +2,7 @@
 		  
 		  map = new google.maps.Map(document.getElementById('map'), {
 		    center: {lat: 37.7833, lng: -122.431297},
-		    zoom: 12,
+		    zoom: 13,
 		    mapTypeId: google.maps.MapTypeId.ROADMAP
 		  });
 
