@@ -128,7 +128,7 @@
 		.tab {
 		  display: none;
 		  background-color: #e7e7e7;
-		  height: 50px;
+		  height: 70px;
 		}
 
 		.tab.is-active {
@@ -141,5 +141,13 @@
 
 		.details_info {
 			background-color: #e7e7e7;
-			height: 434px;
+			height: 414px;
+			overflow: scroll;
 		}	
+
+		.header {
+			color: #1a1aff;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
