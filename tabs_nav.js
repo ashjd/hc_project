@@ -49,10 +49,6 @@
 
 		    var activateContent = function (index){
 
-			/*for (i=0; i<userChoice.length; i++){
-				userChoice.pop();
-			}*/
-
 				while (userChoice.length > 0){
 					userChoice.pop();
 				}
@@ -62,20 +58,20 @@
 		    		case 0 : document.getElementById("info").innerHTML = "You are inside 'Places to visit' !"; 
 		    				 break;
 		    		case 1 : userChoice.push('lodging'); 
-		    				 document.getElementById("hotels").innerHTML = "You are inside 'Hotels tab' !"; 
+		    				 document.getElementById("hotels").innerHTML = "Here are some details about your lodging options in the city."; 
 		    				 break;
 		    		case 2 : userChoice.push('restaurant', 'cafe');
-		    				 document.getElementById("restaurants").innerHTML = "You are inside 'Restaurants tab' !"; 
+		    				 document.getElementById("restaurants").innerHTML = "Here are some details about your Dining options in the city."; 
 		    				 break;
 		    		case 3 : userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
-		    				 document.getElementById("store").innerHTML = "You are inside 'Stores tab' !"; 
+		    				 document.getElementById("store").innerHTML = "Here are some details about your shopping options in the city."; 
 		    				 break;
 		    		case 4 : userChoice.push('park','aquarium','art_gallery'); 
-		    				 document.getElementById("rec").innerHTML = "You are inside 'News tab' !"; 
+		    				 document.getElementById("rec").innerHTML = "Here are some details about your Recreation options in the city."; 
 		    				 break;
 		    	}
 
-		    	loadMapContents (userChoice);
+		    	loadMapContents (userChoice, index);
 		    }
 		    
 		     // Returns init and goToTab 

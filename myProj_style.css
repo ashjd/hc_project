@@ -128,7 +128,7 @@
 		.tab {
 		  display: none;
 		  background-color: #e7e7e7;
-		  height: 483px;
+		  height: 50px;
 		}
 
 		.tab.is-active {
@@ -139,4 +139,7 @@
 		  padding: 1.5rem;
 		}
 
-	
+		.details_info {
+			background-color: #e7e7e7;
+			height: 434px;
+		}	
