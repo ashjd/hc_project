@@ -20,8 +20,9 @@ function loadMapContents (userChoice) {
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 	    for (var i = 0; i < results.length; i++) {
-	      createMarker(results[i]);
+	      //createMarker(results[i]);
 	      showDetails(results[i]);
+	      createPhotoMarker(results[i]);
 	    }
 	 }
 }
@@ -41,25 +42,40 @@ function createMarker(place) {
  	});
 }
 
+
+function createPhotoMarker(place) {
+  var photos = place.photos;
+  if (!photos) {
+  	createMarker(place);
+    return;
+  }
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+    title: place.name,
+    icon: photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+  		var img = document.createElement('img');
+  		img.src = photos[0].getUrl({'maxWidth': 350, 'maxHeight': 350});
+	   	document.getElementById("details_info").appendChild(img);
+ });
+}
+
+
 function showDetails (place){
 		
-	/*var divId = "";
-
-	switch (index){
-		case 0 : divId = "info1"; break;
-		case 1 : divId = "hotels1"; break;
-		case 2 : divId = "restaurants1"; break;
-		case 3 : divId = "store1"; break;
-		case 4 : divId = "rec1"; break;
-	}
-*/
 	var request = { reference: place.reference };
     	
     service.getDetails(request, function(details, status) {
     	if (status == google.maps.places.PlacesServiceStatus.OK)
-        document.getElementById("details_info").innerHTML += "<br />" + "<br />" + details.name + "<br />" + details.formatted_address +"<br />" + details.website + "<br />" + details.rating + "<br />" + details.formatted_phone_number;
+        document.getElementById("details_info").innerHTML += "<br />" + "<br />" + details.name + "<br />" + details.formatted_address +"<br />" + details.website + "<br />" + "User Rating out of 5 is " + details.rating + "<br />" + details.formatted_phone_number;
         
     });
     
 }
+
+
 
