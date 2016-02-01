@@ -57,10 +57,12 @@ function createPhotoMarker(place) {
     icon: photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35})
   });
 
+  document.getElementById("photo_div").innerHTML = "Please click on the photo markers to see the photos here."
+
   google.maps.event.addListener(marker, 'click', function() {
   		var img = document.createElement('img');
   		img.src = photos[0].getUrl({'maxWidth': 350, 'maxHeight': 350});
-	   	document.getElementById("details_info").appendChild(img);
+	   	document.getElementById("photo_div").appendChild(img);
  });
 }
 
