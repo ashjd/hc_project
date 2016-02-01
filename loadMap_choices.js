@@ -1,6 +1,7 @@
+// This function loads the appropriate information on the map according to user's choice of place types.  
+
 function loadMapContents (userChoice) {
 
-//	var index = index;
 	infowindow = new google.maps.InfoWindow();
 
 	document.getElementById("details_info").innerHTML = "";

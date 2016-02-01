@@ -47,8 +47,6 @@
 		        	scaledSize: new google.maps.Size(25, 25)
 		    	};
 
-		    	displayPhoto (place);
-
 		      	// Create a marker for each place.
 		      	markers.push(new google.maps.Marker({
 			        map: map,
@@ -66,21 +64,9 @@
 		    });
 
 		    map.fitBounds(bounds);
+		    //activateContent (0);
 		  });
 	
-		function displayPhoto(place) {
-			  var photos = place.photos;
-			  if (!photos) {
-			    return;
-			  }
-
-			  
-	  		var img = document.createElement('img');
-	  		img.src = photos[0].getUrl({'maxWidth': 350, 'maxHeight': 350});
-		   	document.getElementById("details_info").appendChild(img);
-				  
-		}	  
-		  
 	}
 
 	
