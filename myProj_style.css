@@ -45,7 +45,7 @@
 			margin-top: 10px;
 			margin-left: 10px;
 			height: 525px;
-			width: 42%;
+			width: 50%;
 			border: 2px solid #BDBCBD;
 			float: left;
 		}
@@ -53,7 +53,7 @@
 		.tabs {
 			margin-top: 10px;
 			margin-right: 10px;
-			margin-left: 44%;
+			margin-left: 52%;
 			height: 525px;
 			border: 2px solid #BDBCBD;
 		}
@@ -139,29 +139,11 @@
 		  padding: 1rem;
 		}
 
-		.info_container {
-			background-color: #4d4dff;
-			height: 414px;
-			min-width: 200px;
-			
-		}
-
-
 		.details_info {
-			float :right;
-			width: 50%;
 			background-color: #e7e7e7;
 			height: 414px;
 			overflow: scroll;
 		}	
-
-		.photo_div {
-			float: left;
-			background-color: #e7e7e7;
-			height: 414px;
-			overflow: scroll;
-			width: 50%;
-		}
 
 		.header {
 			color: #1a1aff;
@@ -169,7 +151,5 @@
 			font-weight: bold;
 		}
 
-		.clear-both {
- 		  	clear: both;
-		}
+	
 

@@ -49,6 +49,8 @@
 
 		    var activateContent = function (index){
 
+		    	var userChoice = [];
+
 				while (userChoice.length > 0){
 					userChoice.pop();
 				}
