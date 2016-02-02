@@ -1,3 +1,5 @@
+	var map;
+
 	function initAutocomplete() {
 		  
 		  	map = new google.maps.Map(document.getElementById('map'), {
@@ -5,6 +7,8 @@
 		    	zoom: 14,
 		    	mapTypeId: google.maps.MapTypeId.ROADMAP
 		  	});
+
+		  	var markers = [];
 
 		  		// Create the search box and link it to the UI element.
 		  	
@@ -36,7 +40,7 @@
 		    document.getElementById("details_info").innerHTML = "";
 
 		    		// For each place, get the icon, name and location.
-		    bounds = new google.maps.LatLngBounds();
+		    var bounds = new google.maps.LatLngBounds();
 		    
 		    places.forEach(function(place) {
 		      	var icon = {

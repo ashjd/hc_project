@@ -1,6 +1,7 @@
 // This function loads the appropriate information on the map according to user's choice of place types.  
 
 var markersC = [];
+var markersP = [];
 
 function loadMapContents (userChoice) {
 
@@ -9,10 +10,14 @@ function loadMapContents (userChoice) {
 	markersC.forEach(function(marker) {
 		marker.setMap(null);
 	});
+	markersP.forEach(function(marker) {
+		marker.setMap(null);
+	});
+
 
 	var service = new google.maps.places.PlacesService(map);
 	var bounds = map.getBounds();
-	
+
 	service.nearbySearch({
 	    bounds: bounds,
 	    types: userChoice
@@ -66,6 +71,8 @@ function createPhotoMarker(place) {
   		img.src = photos[0].getUrl({'maxWidth': 350, 'maxHeight': 350});
 	   	document.getElementById("photo_div").appendChild(img);
  });
+
+  markersP.push(marker);
 }
 
 
