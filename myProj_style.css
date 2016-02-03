@@ -151,5 +151,28 @@
 			font-weight: bold;
 		}
 
+				
+		#imgbox 
+		{
+		    position : absolute; 
+		    filter: Alpha(Opacity=0);
+		    visibility : hidden;
+		    height : 350px;
+		    width : 350px;
+		    z-index : 50;
+		    overflow : hidden;
+		}
+
+		#btn 
+		{
+		    position : absolute; 
+		    filter: Alpha(Opacity=0);
+		    visibility : hidden;
+		    height : 30px;
+		    width : 100px;
+		    z-index : 50;
+		    overflow : hidden;
+		}
+
 	
 
