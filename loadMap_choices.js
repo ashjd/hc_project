@@ -82,9 +82,11 @@ function showDetails (place){
     var	service = new google.maps.places.PlacesService(map);
 
     service.getDetails(request, function(details, status) {
-    	if (status == google.maps.places.PlacesServiceStatus.OK)
-        document.getElementById("details_info").innerHTML += "<br />" + "<br />" + details.name + "<br />" + details.formatted_address +"<br />" + details.website + "<br />" + "User Rating out of 5 is " + details.rating + "<br />" + details.formatted_phone_number;
-        
+    	if (status == google.maps.places.PlacesServiceStatus.OK) {
+    		var webLink = details.name;
+    		var web = webLink.link (details.website);
+        	document.getElementById("details_info").innerHTML += "<br />" + "<br />" + "<strong>" + web + "</strong>" + "<br />" + details.formatted_address + "<br />" + "User Rating out of 5 : " + details.rating + "<br />" + details.formatted_phone_number;
+        }
     });
     
 }
